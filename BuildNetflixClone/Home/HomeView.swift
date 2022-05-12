@@ -10,22 +10,33 @@ struct HomeView: View {
         ZStack{
             Color.black
                 .edgesIgnoringSafeArea(.all)
+            
             ScrollView(showsIndicators: false) {
+                
                 // Main VStack
                 LazyVStack {
-                    TopMoviePreview(movie: exampleMovie2)
+                    
+                    TopMoviePreview(movie: exampleMovie9)
                         .frame(width: screen.width)
                         .padding(.top, -100)
+                    
                     ForEach(vm.allcatorgories, id: \.self) { category in
+                        
                         VStack {
                             HStack {
+                                
                                 Text(category)
                                     .font(.title3)
                                     .bold()
+                                
                                 Spacer()
+                                
                             }
+                            
                             ScrollView(.horizontal, showsIndicators: false) {
+                                
                                 LazyHStack{
+                                    
                                     ForEach(vm.getMovives(forCategory: category)) { movie in
                                         StandardHomeMovieView(movie: movie)
                                             .frame(width: 100, height: 200)
