@@ -18,6 +18,7 @@
 		C669A850282C119100438E40 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C669A84F282C119100438E40 /* GlobalHelpers.swift */; };
 		C6FCA1D4282D3F28002E52F3 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCA1D3282D3F28002E52F3 /* HomeVM.swift */; };
 		C6FCA1D6282D4BDE002E52F3 /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCA1D5282D4BDE002E52F3 /* TopMoviePreview.swift */; };
+		C6FCA1D9282D574E002E52F3 /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCA1D8282D574E002E52F3 /* SmallVerticalButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C669A84F282C119100438E40 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		C6FCA1D3282D3F28002E52F3 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		C6FCA1D5282D4BDE002E52F3 /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
+		C6FCA1D8282D574E002E52F3 /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +67,7 @@
 		C669A836282C0D2100438E40 /* BuildNetflixClone */ = {
 			isa = PBXGroup;
 			children = (
-				C669A84B282C10C600438E40 /* Movie.swift */,
+				C6FCA1D7282D5718002E52F3 /* Model */,
 				C669A847282C0DAD00438E40 /* Home */,
 				C669A839282C0D2100438E40 /* ContentView.swift */,
 				C669A837282C0D2100438E40 /* BuildNetflixCloneApp.swift */,
@@ -93,6 +95,15 @@
 				C6FCA1D5282D4BDE002E52F3 /* TopMoviePreview.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		C6FCA1D7282D5718002E52F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C669A84B282C10C600438E40 /* Movie.swift */,
+				C6FCA1D8282D574E002E52F3 /* SmallVerticalButton.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 				C6FCA1D6282D4BDE002E52F3 /* TopMoviePreview.swift in Sources */,
 				C669A838282C0D2100438E40 /* BuildNetflixCloneApp.swift in Sources */,
 				C669A84E282C112500438E40 /* StandardHomeMovieView.swift in Sources */,
+				C6FCA1D9282D574E002E52F3 /* SmallVerticalButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
