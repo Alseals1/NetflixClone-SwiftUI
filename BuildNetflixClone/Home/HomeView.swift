@@ -1,23 +1,21 @@
-//
-//  HomeView.swift
-//  BuildNetflixClone
-//
-//  Created by Alandis Seals on 5/11/22.
-//
-
 import SwiftUI
 
 struct HomeView: View {
     var vm = HomeVM()
+    var screen = UIScreen.main.bounds
+    
+    
     var body: some View {
         
         ZStack{
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            
-            // Main VStack
             ScrollView(showsIndicators: false) {
+                // Main VStack
                 LazyVStack {
+                    TopMoviePreview(movie: exampleMovie2)
+                        .frame(width: screen.width)
+                        .padding(.top, -100)
                     ForEach(vm.allcatorgories, id: \.self) { category in
                         VStack {
                             HStack {
@@ -32,7 +30,6 @@ struct HomeView: View {
                                         StandardHomeMovieView(movie: movie)
                                             .frame(width: 100, height: 200)
                                             .padding(.horizontal, 20)
-                                        
                                     }
                                 }
                             }
