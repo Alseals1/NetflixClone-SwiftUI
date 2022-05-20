@@ -1,10 +1,3 @@
-//
-//  MovieDetailView.swift
-//  BuildNetflixClone
-//
-//  Created by Alandis Seals on 5/18/22.
-//
-
 import SwiftUI
 
 struct MovieDetailView: View {
@@ -18,7 +11,9 @@ struct MovieDetailView: View {
                 .edgesIgnoringSafeArea(.all)
             VStack {
                 HStack {
+                    
                     Spacer()
+                    
                     Button(action: {}, label: {
                         Image(systemName: "xmark.circle")
                             .font(.system(size: 28))
@@ -26,8 +21,11 @@ struct MovieDetailView: View {
                     
                 }
                 .padding(.horizontal, 22)
+                
                 ScrollView(.vertical, showsIndicators: false) {
+                    
                     VStack {
+                        
                         StandardHomeMovieView(movie: movie)
                             .frame(width: screen.width / 2)
                         MovieInfoSubHeadline(movie: movie)
@@ -42,9 +40,14 @@ struct MovieDetailView: View {
                                 .bold()
                         }
                         PlayButton(text: "Play", imageName: "play.fill", backgroundColor: .red, action: {
-                            //
+                            
                             
                         })
+                        
+                        CurrentEpisodeInformation(movie: movie)
+                        
+                        CastInfo(movie: movie)
+                       
                     }
                     .padding(.horizontal, 10)
                 }
@@ -61,5 +64,60 @@ struct MovieDetailView: View {
 struct MovieDetailView_Previews: PreviewProvider {
     static var previews: some View {
         MovieDetailView(movie: exampleMovie2)
+    }
+}
+
+struct CastInfo: View {
+    var movie: Movie
+    var body: some View {
+        
+        VStack(spacing: 3) {
+            
+            HStack {
+                
+                Text("Cast: \(movie.cast)")
+                
+                Spacer()
+            }
+            
+            HStack {
+                
+                Text("Creators: \(movie.creators)")
+                
+                Spacer()
+                
+            }
+            
+        }
+        .font(.caption)
+        .foregroundColor(.gray)
+        .padding(.vertical, 10)
+    }
+}
+
+struct CurrentEpisodeInformation: View {
+    var movie: Movie
+    var body: some View {
+        Group {
+            
+            HStack {
+                
+                Text(movie.episodeIndoDisplay)
+                    .bold()
+                
+                Spacer()
+                
+            }
+            
+            .padding(.vertical, 4)
+            
+            HStack {
+                
+                Text(movie.episodeDescriptionDisplay)
+                    .font(.subheadline)
+                
+                Spacer()
+            }
+        }
     }
 }
