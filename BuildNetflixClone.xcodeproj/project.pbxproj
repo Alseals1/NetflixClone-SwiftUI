@@ -25,6 +25,7 @@
 		C6FCA1DC282D5E5A002E52F3 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCA1DB282D5E5A002E52F3 /* PlayButton.swift */; };
 		C6FCA1E0282D7122002E52F3 /* TopRowButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCA1DF282D7122002E52F3 /* TopRowButtons.swift */; };
 		C6FE051D2837E02A0089D49F /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE051C2837E02A0089D49F /* Episode.swift */; };
+		C6FE051F283808010089D49F /* CustomTabSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FE051E283808010089D49F /* CustomTabSwitcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		C6FCA1DB282D5E5A002E52F3 /* PlayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		C6FCA1DF282D7122002E52F3 /* TopRowButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRowButtons.swift; sourceTree = "<group>"; };
 		C6FE051C2837E02A0089D49F /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		C6FE051E283808010089D49F /* CustomTabSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabSwitcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				C6FCA1DB282D5E5A002E52F3 /* PlayButton.swift */,
 				C669A84D282C112500438E40 /* StandardHomeMovieView.swift */,
 				C616AFC328353D72006D012C /* MovieInfoSubHeadline.swift */,
+				C6FE051E283808010089D49F /* CustomTabSwitcher.swift */,
 			);
 			path = HelperViews;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				C6FE051D2837E02A0089D49F /* Episode.swift in Sources */,
 				C616AFC428353D72006D012C /* MovieInfoSubHeadline.swift in Sources */,
 				C669A838282C0D2100438E40 /* BuildNetflixCloneApp.swift in Sources */,
+				C6FE051F283808010089D49F /* CustomTabSwitcher.swift in Sources */,
 				C669A84E282C112500438E40 /* StandardHomeMovieView.swift in Sources */,
 				C6FCA1D9282D574E002E52F3 /* SmallVerticalButton.swift in Sources */,
 			);
