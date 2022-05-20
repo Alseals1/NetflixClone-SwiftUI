@@ -21,7 +21,7 @@ struct HomeView: View {
                     
                     TopMoviePreview(movie: exampleMovie6)
                         .frame(width: screen.width)
-                        .padding(.top, -100)
+                        .padding(.top, -120)
                         .zIndex(-1)
                     
                     ForEach(vm.allcatorgories, id: \.self) { category in
