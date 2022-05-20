@@ -1,10 +1,3 @@
-//
-//  TopRowButtons.swift
-//  BuildNetflixClone
-//
-//  Created by Alandis Seals on 5/12/22.
-//
-
 import SwiftUI
 
 struct TopRowButtons: View {
