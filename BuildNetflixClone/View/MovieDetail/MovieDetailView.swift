@@ -1,8 +1,11 @@
 import SwiftUI
 
 struct MovieDetailView: View {
-    var movie: Movie
+    @State private var showSeasonPicker = false
+    @State private var selectedSeason = 1
     
+    
+    var movie: Movie
     let screen = UIScreen.main.bounds
     
     var body: some View {
@@ -53,7 +56,7 @@ struct MovieDetailView: View {
                                 //
                             })
                             
-                            SmallVerticalButton(text: "Rate", isOnImage: "hand.thumbsup.fill", isOffImage: "hand.thumbsup", isOn: false, action: {
+                            SmallVerticalButton(text: "Rate", isOnImage: "hand.thumbsup.fill", isOffImage: "hand.thumbsup", isOn: true, action: {
                                 //
                             })
                             
