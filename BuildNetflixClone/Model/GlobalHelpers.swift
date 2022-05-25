@@ -77,11 +77,14 @@ let exampleMovie1 = Movie(id: UUID().uuidString,
                           thumbnail: URL(string: "https://picsum.photos/200/300")!,
                           categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
                           year: 2020,
-                          rating: "TV-MA", numberOfSeason: 3,
+                          rating: "TV-MA",
+                          numberOfSeason: 3,
                           defaultEpisode: exampleEpisodeInfo1,
                           creators: "Alandis Seals",
                           cast: "Aria Seals,Khloe Carter, Khali Carter, Jabarrion Seals",
-                          moreLikeThis: [exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6, exampleMovie7, exampleMovie8, exampleMovie9], trailers: exampleTrailers)
+                          moreLikeThis: [exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6, exampleMovie7, exampleMovie8, exampleMovie9],
+                          episodes: allExampleEpisodes,
+                          trailers: exampleTrailers)
 
 let exampleMovie2 = Movie(id: UUID().uuidString,
                           name: "Boss Baby",

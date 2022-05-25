@@ -3,15 +3,22 @@ import SwiftUI
 
 enum CustomTabs: String {
     case episode = "EPISODES"
-    case trailors = "TRAILERS & MORE"
+    case trailers = "TRAILERS & MORE"
     case more = "MORE LIKE THIS"
 }
+
+
 
 struct CustomTabSwitcher: View {
     @State private var currentTab: CustomTabs = .episode
     
     var tabs: [CustomTabs]
     var movie: Movie
+    
+    
+    
+    @Binding var showSeasonPicker: Bool
+    @Binding var selectedSeason: Int
     
     func widthForTab(_ tab: CustomTabs) -> CGFloat {
         let string = tab.rawValue
@@ -51,8 +58,8 @@ struct CustomTabSwitcher: View {
             }
             switch currentTab {
             case .episode:
-                Text("EPISODE")
-            case .trailors:
+                EpisodesView(showSeasonPicker: $showSeasonPicker, selectedSeason: $selectedSeason, episodes: movie.episodes ?? [])
+            case .trailers:
                 TrailerListView(trailers: movie.trailers)
             case .more:
                 MoreLikeThisView(movies: movie.moreLikeThis)
@@ -67,7 +74,12 @@ struct CustonTabSwitcher_Previews: PreviewProvider {
         ZStack{
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            CustomTabSwitcher(tabs: [.episode, .trailors, .more], movie: exampleMovie1 )
+            
+            
+            CustomTabSwitcher(tabs: [.episode, .trailers, .more],
+                              movie: exampleMovie1,
+                              showSeasonPicker: .constant(false),
+                              selectedSeason: .constant(1) )
         }
         
     }
