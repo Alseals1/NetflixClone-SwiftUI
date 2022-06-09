@@ -1,10 +1,3 @@
-//
-//  BuildNetflixCloneApp.swift
-//  BuildNetflixClone
-//
-//  Created by Alandis Seals on 5/11/22.
-//
-
 import SwiftUI
 
 @main

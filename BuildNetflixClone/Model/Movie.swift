@@ -6,6 +6,7 @@ struct Movie: Identifiable {
     var thumbnail: URL
     
     var categories: [String]
+    var genre: HomeGenre = .AllGenrees
     
     //MovieDetailView
     var year: Int

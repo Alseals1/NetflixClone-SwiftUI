@@ -12,7 +12,6 @@
 		C616AFC428353D72006D012C /* MovieInfoSubHeadline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C616AFC328353D72006D012C /* MovieInfoSubHeadline.swift */; };
 		C6378A1928517E200098F708 /* HomeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6378A1828517E200098F708 /* HomeStack.swift */; };
 		C669A838282C0D2100438E40 /* BuildNetflixCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C669A837282C0D2100438E40 /* BuildNetflixCloneApp.swift */; };
-		C669A83A282C0D2100438E40 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C669A839282C0D2100438E40 /* ContentView.swift */; };
 		C669A83C282C0D2200438E40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C669A83B282C0D2200438E40 /* Assets.xcassets */; };
 		C669A83F282C0D2200438E40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C669A83E282C0D2200438E40 /* Preview Assets.xcassets */; };
 		C669A846282C0DA900438E40 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C669A845282C0DA900438E40 /* HomeView.swift */; };
@@ -41,7 +40,6 @@
 		C6378A1828517E200098F708 /* HomeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStack.swift; sourceTree = "<group>"; };
 		C669A834282C0D2100438E40 /* BuildNetflixClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuildNetflixClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C669A837282C0D2100438E40 /* BuildNetflixCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildNetflixCloneApp.swift; sourceTree = "<group>"; };
-		C669A839282C0D2100438E40 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C669A83B282C0D2200438E40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C669A83E282C0D2200438E40 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C669A845282C0DA900438E40 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				C669A837282C0D2100438E40 /* BuildNetflixCloneApp.swift */,
-				C669A839282C0D2100438E40 /* ContentView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -138,12 +135,12 @@
 		C669A836282C0D2100438E40 /* BuildNetflixClone */ = {
 			isa = PBXGroup;
 			children = (
-				C6FCA1D7282D5718002E52F3 /* Model */,
-				C6988F8D28392B210059C2D3 /* VideoPlayer */,
-				C616AFBD28353792006D012C /* View */,
-				C616AFBE283537A0006D012C /* App */,
-				C669A83B282C0D2200438E40 /* Assets.xcassets */,
 				C616AFBF283537F2006D012C /* HelperViews */,
+				C616AFBE283537A0006D012C /* App */,
+				C6FCA1D7282D5718002E52F3 /* Model */,
+				C616AFBD28353792006D012C /* View */,
+				C6988F8D28392B210059C2D3 /* VideoPlayer */,
+				C669A83B282C0D2200438E40 /* Assets.xcassets */,
 				C669A83D282C0D2200438E40 /* Preview Content */,
 			);
 			path = BuildNetflixClone;
@@ -277,7 +274,6 @@
 				C669A846282C0DA900438E40 /* HomeView.swift in Sources */,
 				C6FCA1E0282D7122002E52F3 /* TopRowButtons.swift in Sources */,
 				C6FCA1D4282D3F28002E52F3 /* HomeVM.swift in Sources */,
-				C669A83A282C0D2100438E40 /* ContentView.swift in Sources */,
 				C6FCA1DC282D5E5A002E52F3 /* PlayButton.swift in Sources */,
 				C6988F93283938290059C2D3 /* EpisodesView.swift in Sources */,
 				C6988F8C283929250059C2D3 /* SwiftUIVideoView.swift in Sources */,
