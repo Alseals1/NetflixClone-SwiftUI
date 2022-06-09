@@ -12,6 +12,8 @@
 		C616AFC428353D72006D012C /* MovieInfoSubHeadline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C616AFC328353D72006D012C /* MovieInfoSubHeadline.swift */; };
 		C6378A1928517E200098F708 /* HomeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6378A1828517E200098F708 /* HomeStack.swift */; };
 		C6378A1B28519F4A0098F708 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6378A1A28519F4A0098F708 /* ContentView.swift */; };
+		C64C334B2852477E00A5AC15 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C334A2852477D00A5AC15 /* SearchBarView.swift */; };
+		C64C334E2852494000A5AC15 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C334D2852494000A5AC15 /* Colors.swift */; };
 		C669A838282C0D2100438E40 /* BuildNetflixCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C669A837282C0D2100438E40 /* BuildNetflixCloneApp.swift */; };
 		C669A83C282C0D2200438E40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C669A83B282C0D2200438E40 /* Assets.xcassets */; };
 		C669A83F282C0D2200438E40 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C669A83E282C0D2200438E40 /* Preview Assets.xcassets */; };
@@ -40,6 +42,8 @@
 		C616AFC328353D72006D012C /* MovieInfoSubHeadline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoSubHeadline.swift; sourceTree = "<group>"; };
 		C6378A1828517E200098F708 /* HomeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStack.swift; sourceTree = "<group>"; };
 		C6378A1A28519F4A0098F708 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C64C334A2852477D00A5AC15 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		C64C334D2852494000A5AC15 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C669A834282C0D2100438E40 /* BuildNetflixClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuildNetflixClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C669A837282C0D2100438E40 /* BuildNetflixCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildNetflixCloneApp.swift; sourceTree = "<group>"; };
 		C669A83B282C0D2200438E40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 			children = (
 				C669A847282C0DAD00438E40 /* Home */,
 				C616AFC2283538BE006D012C /* MovieDetail */,
+				C64C33492852471A00A5AC15 /* Search */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,9 +124,26 @@
 			path = MovieDetail;
 			sourceTree = "<group>";
 		};
+		C64C33492852471A00A5AC15 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				C64C334A2852477D00A5AC15 /* SearchBarView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		C64C334C2852492F00A5AC15 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C64C334D2852494000A5AC15 /* Colors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C669A82B282C0D2100438E40 = {
 			isa = PBXGroup;
 			children = (
+				C64C334C2852492F00A5AC15 /* Extensions */,
 				C669A836282C0D2100438E40 /* BuildNetflixClone */,
 				C669A835282C0D2100438E40 /* Products */,
 			);
@@ -274,11 +296,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C669A850282C119100438E40 /* GlobalHelpers.swift in Sources */,
+				C64C334E2852494000A5AC15 /* Colors.swift in Sources */,
 				C669A846282C0DA900438E40 /* HomeView.swift in Sources */,
 				C6FCA1E0282D7122002E52F3 /* TopRowButtons.swift in Sources */,
 				C6FCA1D4282D3F28002E52F3 /* HomeVM.swift in Sources */,
 				C6FCA1DC282D5E5A002E52F3 /* PlayButton.swift in Sources */,
 				C6988F93283938290059C2D3 /* EpisodesView.swift in Sources */,
+				C64C334B2852477E00A5AC15 /* SearchBarView.swift in Sources */,
 				C6988F8C283929250059C2D3 /* SwiftUIVideoView.swift in Sources */,
 				C6988F8F28392C630059C2D3 /* VideoPreviewImage.swift in Sources */,
 				C616AFC1283538B9006D012C /* MovieDetailView.swift in Sources */,
