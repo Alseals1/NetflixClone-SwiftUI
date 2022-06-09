@@ -1,10 +1,3 @@
-//
-//  TopMoviePreview.swift
-//  BuildNetflixClone
-//
-//  Created by Alandis Seals on 5/12/22.
-//
-
 import SwiftUI
 import Kingfisher
 
@@ -40,7 +33,7 @@ struct TopMoviePreview: View {
                             
                             if !isCategoryLast(category) {
                                 Image(systemName: "circle.fill")
-                                    .foregroundColor(.blue)
+                                    .foregroundColor(.gray)
                                     .font(.system(size: 4))
                             }
                         }
@@ -70,7 +63,7 @@ struct TopMoviePreview: View {
                 }
             }
             .background(LinearGradient.blackOpacityGradient
-                .padding(.top, 250))
+                .padding(.top, 20))
            
             
         }

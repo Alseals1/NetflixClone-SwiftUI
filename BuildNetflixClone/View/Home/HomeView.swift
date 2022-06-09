@@ -4,7 +4,11 @@ struct HomeView: View {
     var vm = HomeVM()
     var screen = UIScreen.main.bounds
     
-    @State private var movieDetailtoShow: Movie? = nil
+    @State private var movieDetailToShow: Movie? = nil
+    @State private var topRowSelection: HomeTopRow = .home
+    @State private var homeGenre: HomeGenre = .AllGenrees
+    @State private var showGenreSelection = false
+    @State private var showTopRowSelection = false 
     
     var body: some View {
         
@@ -17,7 +21,7 @@ struct HomeView: View {
                 // Main VStack
                 LazyVStack {
                     
-                    TopRowButtons()
+                    TopRowButtons(topRowSelection: $topRowSelection, selectedGenre: $homeGenre, showGenreSelection: $showGenreSelection, showTopRowSelection: $showTopRowSelection )
                         .zIndex(0)
                     
                     TopMoviePreview(movie: exampleMovie6)
@@ -25,41 +29,12 @@ struct HomeView: View {
                         .padding(.top, -120)
                         .zIndex(-1)
                     
-                    ForEach(vm.allcatorgories, id: \.self) { category in
-                        
-                        VStack {
-                            HStack {
-                                
-                                Text(category)
-                                    .font(.title3)
-                                    .bold()
-                                
-                                Spacer()
-                                
-                            }
-                            
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                
-                                LazyHStack{
-                                    
-                                    ForEach(vm.getMovives(forCategory: category)) { movie in
-                                        StandardHomeMovieView(movie: movie)
-                                            .frame(width: 100, height: 200)
-                                            .padding(.horizontal, 20)
-                                            .onTapGesture {
-                                                movieDetailtoShow = movie
-                                            }
-                                    }
-                                }
-                            }
-                        }
-                        
-                    }
+                    HomeStack(vm: vm, topRowSelection: topRowSelection, movieDetailToShow: $movieDetailToShow )
                 }
             }
-            if movieDetailtoShow != nil {
-                MovieDetailView(movie: movieDetailtoShow!, movieDetailToShow: $movieDetailtoShow)
-                    .animation(.easeInOut)
+            if movieDetailToShow != nil {
+                MovieDetailView(movie: movieDetailToShow!, movieDetailToShow: $movieDetailToShow)
+                    .animation(.easeIn(duration: 0.10))
                     .transition(.opacity)
             }
         }
@@ -71,5 +46,15 @@ struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
     }
+}
+
+
+
+enum HomeGenre: String {
+    case AllGenrees
+    case Action
+    case Comedy
+    case Horror
+    case Thriller
 }
 

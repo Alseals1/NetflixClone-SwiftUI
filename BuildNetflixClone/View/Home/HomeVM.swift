@@ -9,8 +9,19 @@ class HomeVM: ObservableObject {
     public var allcatorgories: [String] {
         return movies.keys.map({ String($0) })
     }
-    func getMovives(forCategory category: String) -> [Movie] {
-        return movies[category] ?? []
+    func getMovives(forCategory category: String, andHomeRow homeRow: HomeTopRow) -> [Movie] {
+        switch homeRow {
+        case .home:
+            return movies[category] ?? []
+        case .tvShow:
+            return (movies[category] ?? []).filter({$0.movieType == .movie})
+        case .movies:
+            return (movies[category] ?? []).filter({$0.movieType == .tvShow})
+        case .myList:
+            return  movies[category] ?? []
+        }
+        
+        
     }
     
     init() {

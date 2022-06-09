@@ -178,7 +178,7 @@ let exampleEpisodeInfo1 = CurrentEpisodeInfo(episodeName: "Beginning and Ending"
 extension LinearGradient {
     static let blackOpacityGradient = LinearGradient(
         gradient: Gradient(
-        colors: [Color.black.opacity(0.0), Color.black.opacity(0.90)]),
+        colors: [Color.black.opacity(0.0), Color.black.opacity(1)]),
                    startPoint: .top,
                    endPoint: .bottom)
 }
